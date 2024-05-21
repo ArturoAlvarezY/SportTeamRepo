@@ -1,0 +1,23 @@
+{
+  "name": "sportteamrepo",
+  "version": "1.0.0",
+  "description": "learning npm ",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArturoAlvarezY/SportTeamRepo.git"
+  },
+  "author": "PabloAbad, Jorge, Arturo, Javier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArturoAlvarezY/SportTeamRepo/issues"
+  },
+  "homepage": "https://github.com/ArturoAlvarezY/SportTeamRepo#readme",
+  "devDependencies": {
+    "sass": "^1.77.2"
+  }
+}
