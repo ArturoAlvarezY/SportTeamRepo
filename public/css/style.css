@@ -1,5 +1,22 @@
 body {
-  background-color: #cfc2be;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../img/basket.jpeg);
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges; 
+}
+
+.headerHeight{
+  display: flex;
+  height: 80vh;
+}
+
+.flexingTittle{
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
