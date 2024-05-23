@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../src/sass/style.scss","../../src/sass/_color-palet.scss"],"names":[],"mappings":"AAEA;EACI,kBCEU","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["../../src/sass/_footer.scss","../../src/sass/style.scss","../../src/sass/_color-palet.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;;AAIJ;EACI;EACA;EACA;;;ACdR;EACI,kBCCU","file":"style.css"}

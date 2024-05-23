@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 5px;
+    background-color: #0a0310;
+   
+    .container {
+        height: 20px;
+        margin-left: 50px;
+        padding-bottom: 15px;
+        
+    }
+
+    .copy {
+        margin-right: 100px;
+        display: flexbox;
+        justify-content: flex-end;
+    }
+}
+
+
+
