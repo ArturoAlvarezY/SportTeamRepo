@@ -1,3 +1,143 @@
+nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 0 0 16px;
+  width: 100%;
+  height: 60px;
+  background: #0a0310;
+  color: #cfc2be;
+}
+nav > input {
+  display: none;
+}
+nav > .nav-btn {
+  display: none;
+}
+nav .navbar-menu > a:hover {
+  background-color: #cfc2be;
+  color: #0a0310;
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navbar-menu {
+  font-size: 1.2rem;
+  background: transparent;
+  transition: all 0.3s;
+}
+.navbar-menu > a {
+  text-decoration: none;
+  margin: 0px;
+  padding: 20px;
+  color: #cfc2be;
+  background: transparent;
+  transition: all 0.3s;
+}
+.navbar-menu > a.active {
+  background-color: #cfc2be;
+  color: #0a0310;
+}
+
+@media (max-width: 600px) {
+  nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  nav > .nav-btn > label:hover {
+    background-color: #0a0310;
+  }
+  nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  nav > .nav-menu {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #cfc2be;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  nav > .nav-menu > a {
+    display: block;
+    width: 100%;
+  }
+  nav > #nav-check:not(:checked) ~ .nav-menu {
+    height: 0px;
+  }
+  nav > #nav-check:checked ~ .nav-menu {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+  nav #nav-check:checked ~ .nav-btn > label {
+    background-color: #0a0310;
+  }
+}
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.data {
+  text-align: start;
+  padding-block: 10px;
+  padding-inline: 5px;
+}
+
+.login {
+  background-color: #124e8c;
+  color: #81ecdf;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 45vb;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  background-color: #cfc2be;
+  color: #0a0310;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+button {
+  width: 100px;
+  margin-top: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #cfc2be;
+  background: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #0a0310;
+  background-color: #0a0310;
+}
+
 footer {
   display: flex;
   flex-direction: row;
@@ -17,7 +157,9 @@ footer .copy {
 }
 
 body {
+  margin: 0px;
   background-color: #cfc2be;
+  font-family: "Poppins";
 }
 
 /*# sourceMappingURL=style.css.map */
