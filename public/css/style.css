@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nav {
   position: fixed;
   z-index: 1;
@@ -94,6 +95,8 @@ nav .navbar-menu > a:hover {
     background-color: #0a0310;
   }
 }
+=======
+>>>>>>> feature/login.html
 .login-body {
   display: flex;
   justify-content: center;
@@ -130,7 +133,11 @@ button {
   margin-top: 25px;
   padding: 10px;
   border-radius: 10px;
+<<<<<<< HEAD
   color: #cfc2be;
+=======
+  color: #81ecdf;
+>>>>>>> feature/login.html
   background: transparent;
   border-style: solid;
   border-width: 1px;
@@ -138,6 +145,7 @@ button {
   background-color: #0a0310;
 }
 
+<<<<<<< HEAD
 footer {
   display: flex;
   flex-direction: row;
@@ -160,6 +168,10 @@ body {
   margin: 0px;
   background-color: #cfc2be;
   font-family: "Poppins";
+=======
+body {
+  background-color: #cfc2be;
+>>>>>>> feature/login.html
 }
 
 /*# sourceMappingURL=style.css.map */
