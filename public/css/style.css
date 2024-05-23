@@ -10,13 +10,25 @@ body {
   image-rendering: crisp-edges; 
 }
 
-.headerHeight{
+.flexH1{
   display: flex;
   height: 80vh;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
 .flexingTittle{
   display: flex;
 }
+.flexButton{
+  display:flex;
+  justify-content: center;
+}
+
+.date{
+  display: flex;
+  justify-content: center
+}
+
 
 /*# sourceMappingURL=style.css.map */
