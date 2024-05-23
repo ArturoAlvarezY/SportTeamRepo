@@ -1,15 +1,8 @@
-
 .login-body {
-	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: 200px;
 }
-.data {
-	text-align: start;
-	padding-block: 10px;
-	padding-inline: 5px;
-}
+
 .login {
 	background-color: $primary-color;
 	color: $buttom-color;
@@ -17,24 +10,30 @@
 	border-radius: 10px;
 	width: 45vb;
 	text-align: center;
-}
-input {
-	width: 100%;
-	background-color: $ligth-color;
-	color: $black-color;
-	padding: 12px 20px;
-	box-sizing: border-box;
-	border-radius: 10px;
-}
-button {
-	width: 100px;
-	margin-top: 25px;
-	padding: 10px;
-	border-radius: 10px;
-	color: $ligth-color;
-	background: transparent;
-	border-style: solid;
-	border-width: 1px;
-	border-color: $black-color;
-	background-color: $black-color;
+
+	.data {
+		text-align: start;
+		padding-block: 10px;
+		padding-inline: 5px;
+
+		input {
+			width: 100%;
+			background-color: $ligth-color;
+			color: $black-color;
+			padding: 12px 20px;
+			box-sizing: border-box;
+			border-radius: 10px;
+		}
+	}
+
+	button {
+		width: 100px;
+		margin-top: 25px;
+		padding: 10px;
+		border-radius: 10px;
+		color: $ligth-color;
+		border-width: 1px;
+		border-color: $black-color;
+		background-color: $black-color;
+	}
 }
