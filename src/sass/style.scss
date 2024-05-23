@@ -1,5 +1,5 @@
 //ir agregando los demas archivos a importar: 'archivo','archivo2' guradarlo '_archivo.scss'
-@import 'color-palet'; 
+@import 'color-palet', 'footer'; 
 
 body {
     background-color: $ligth-color;
