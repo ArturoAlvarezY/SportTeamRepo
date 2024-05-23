@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nav {
   position: fixed;
   z-index: 1;
@@ -164,6 +165,39 @@ body {
   margin: 0px;
   background-color: #cfc2be;
   font-family: "Poppins";
+=======
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../img/basket.jpeg);
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges; 
+>>>>>>> featureBanner
 }
+
+.flexH1{
+  display: flex;
+  height: 80vh;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.flexingTittle{
+  display: flex;
+}
+.flexButton{
+  display:flex;
+  justify-content: center;
+}
+
+.date{
+  display: flex;
+  justify-content: center
+}
+
 
 /*# sourceMappingURL=style.css.map */
