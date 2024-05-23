@@ -1,45 +1,10 @@
 $font-family_1: 'Poppins';
 
 //ir agregando los demas archivos a importar: 'archivo','archivo2' guradarlo '_archivo.scss'
-@import 'color-palet', 'navbar', 'main', 'login', 'footer';
+@import 'color-palet', 'navbar', 'main', 'baner', 'login', 'footer';
 
 body {
-    background-color: $ligth-color;
+  margin: 0px;
+  background-color: $ligth-color;
+  font-family: $font-family_1;
 }
-  .flexH1{
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../img/basket.jpeg);
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges; 
-    display: flex;
-    height: 80vh;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  
-  h1{
-    font-size: 3rem;
-  }
-  
-  .flexingTittle{
-    display: flex;
-  }
-  .flexButton{
-    display:flex;
-    justify-content: center;
-  }
-  
-  .date{
-    display: flex;
-    justify-content: center
-  }
-  
-  
-  /*# sourceMappingURL=style.css.map */
-  
-
