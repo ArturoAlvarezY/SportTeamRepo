@@ -1,21 +1,13 @@
 footer {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    padding-top: 5px;
-    background-color: #0a0310;
+    background-color: $black-color;
    
-    .container {
-        height: 20px;
-        margin-left: 50px;
-        padding-bottom: 15px;
-        
+    >div {
+        padding-left: 40px;       
     }
-
-    .copy {
-        margin-right: 100px;
-        display: flexbox;
-        justify-content: flex-end;
+   >a {
+      padding-right: 40px;
     }
 }
 
