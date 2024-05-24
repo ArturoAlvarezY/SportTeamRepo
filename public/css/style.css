@@ -101,14 +101,13 @@ nav .navbar-menu .active {
   box-sizing: border-box;
   border-radius: 10px;
 }
-.login button {
+
+.btn {
   width: 100px;
-  margin-top: 25px;
-  padding: 10px;
+  padding: 13px 10px 13px 10px;
   border-radius: 10px;
+  text-decoration: none;
   color: #cfc2be;
-  border-width: 1px;
-  border-color: #0a0310;
   background-color: #0a0310;
 }
 
