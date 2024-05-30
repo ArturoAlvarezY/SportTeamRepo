@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,11 +11,11 @@
 <body>
     <!-- Page Navbar -->
     <nav>
-        <img src="../assets/img/logo.jpg" alt="logo baloncesto">
+        <img src="./public/assets/img/logo.jpg" alt="">
         <h1 class="navbar-title">Sport Team</h1>
         <div class="navbar-menu">
-            <a href="http://127.0.0.1:5500/index.html" class="active">Home</a>
-            <a href="http://127.0.0.1:5500/public/pages/login.html">Login</a>
+            <a href="http://127.0.0.1:5500/index.html">Home</a>
+            <a href="http://127.0.0.1:5500/public/pages/login.html" class="active">Login</a>
             <a href="http://127.0.0.1:5500/public/pages/team.html" hidden>Team</a>
             <a href="http://127.0.0.1:5500/public/pages/ranking.html" hidden>Ranking</a>
             <!-- <a href="#" hidden>KO phase</a>
@@ -22,12 +23,32 @@
         </div>
     </nav>
 
-    <!--Main-->
-    
     <main>
-        <button onclick="" class="btn">Añadir</button>
+        <table id="tabla" cellspacing="0" cellpadding="0">
+            <tr class="destacado">
+                <td>Bandera</td>
+                <td>Nombre</td>
+                <td></td>
+            </tr>
+        </table>
+        <a class="btn" href="#open-modal">Añadir</a>
+        <button class="btn" onclick="llenarTabla();">Comenzar</button>
 
-        <button onclick="" class="btn">Comenzar</button>
+        <div id="open-modal" class="modal-window">
+            <div>
+              <a href="#" title="Close" class="modal-close">Close</a>
+              <div>Ingrese los datos del equipo.</div>
+              <br>
+              <label for="nombre">Nombre</label>
+              <input id="nombre" type="text">
+              <br>
+              <label for="bandera">Bandera</label>
+              <input id="bandera" type="text">
+              <br>
+              <button class="btn" onclick="anadir();">Añadir</button>
+            </div>
+          </div>
+          </div>
     </main>
 
     <!--Footer-->
@@ -45,6 +66,7 @@
         <a href="../assets/logos/icon-copyright.svg" alt="icono de copyright"
                 width="30px">
     </footer>
+<script src="../scripts/app.js"></script>
 </body>
 
 </html>

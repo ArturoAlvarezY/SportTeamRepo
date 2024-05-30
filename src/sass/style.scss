@@ -1,7 +1,7 @@
 $font-family_1: 'Poppins';
 
 //ir agregando los demas archivos a importar: 'archivo','archivo2' guradarlo '_archivo.scss'
-@import 'color-palet', 'navbar', 'main', 'baner', 'login', 'footer', 'buttons';
+@import 'color-palet', 'navbar', 'main', 'baner', 'login', 'footer', 'tabla', 'modal', 'buttons';
 
 body {
   margin: 0px;
