@@ -1,0 +1,39 @@
+.tabletext {
+    text-align: center;
+}
+table {
+    width: 720px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+
+    .destacado {
+        font-family: Arial;
+        font-weight: bold;
+        background-color: $primary-color;
+    }
+
+    tr {
+        cursor: pointer;
+    }
+
+    /* Impares */
+    tr:nth-child(odd) {
+        background-color: $ligth-color;
+    }
+
+    tr:nth-child(odd):hover {
+        color: black;
+        background-color: $primary-color;
+    }
+
+    /* Pares */
+    tr:nth-child(even) {
+        background-color: $secondary-color;
+    }
+
+    tr:nth-child(even):hover {
+        color: black;
+        background-color: $primary-color;
+    }
+}
