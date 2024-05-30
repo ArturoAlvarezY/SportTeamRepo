@@ -50,6 +50,14 @@ nav .navbar-menu .active {
     width: 100%;
   }
 }
+.fondo {
+  background: linear-gradient(rgba(92, 139, 172, 0.5), rgba(156, 221, 220, 0.5)), url(../../public/assets/img/fondo.jpg);
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .flexH1 {
   background: linear-gradient(rgba(92, 139, 172, 0.5), rgba(156, 221, 220, 0.5)), url(../../public/assets/img/baner.jpeg);
   margin: 0;
