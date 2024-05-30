@@ -113,20 +113,40 @@ nav .navbar-menu .active {
 
 footer {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding-top: 5px;
   background-color: #0a0310;
 }
-footer .container {
-  height: 20px;
-  margin-left: 50px;
-  padding-bottom: 15px;
+footer > div {
+  padding-left: 40px;
 }
-footer .copy {
-  margin-right: 100px;
-  display: flexbox;
-  justify-content: flex-end;
+footer > a {
+  padding-right: 40px;
+}
+
+.btn-anadir {
+  font-size: 16px;
+  width: 100px;
+  height: 30px;
+  background-color: #124e8c;
+  color: #81ecdf;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  line-height: 6px;
+}
+
+.btn-comenzar {
+  font-size: 16px;
+  width: 200px;
+  height: 30px;
+  background-color: #124e8c;
+  color: #81ecdf;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  line-height: 6px;
 }
 
 body {
