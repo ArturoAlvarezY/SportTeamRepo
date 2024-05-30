@@ -18,9 +18,13 @@ const function =()=>{
     if(uTeamName===''){
         return 'por favor, dale un nombre a tu equipo'
     }else{
-        return text1.InnerHTML=`<p>${uTeamName}</p>`
+        return team1.InnerHTML=`<p>${uTeamName}</p>`
     }
 }
+
+Obstaculo: Tenemos un solo boton el cual debe rellenar un input por cada linea, de las 16.
+
+Como hacemos para que cada input sea impreso en una linea debajo de la tabla?
 
 log(function())
 
@@ -32,13 +36,13 @@ Se me ocurre algo como, for(n=team1, n<=team16, n++)
 
 En sintesis, me parece que quedaria algo asi:
 
-(click, (function)={
+addTeam.EventListenner(click, (function)={
     for(n=team1, n<=team16, n++){
         const uTeamName= prompt('dime el nombre de tu equipo')
     if(uTeamName===''){
         return 'por favor, dale un nombre a tu equipo'
     }else{
-        return text1.InnerHTML=`<p>${uTeamName}</p>`
+        return n.InnerHTML=`<p>${uTeamName}</p>`
     }
 }
     })
@@ -48,3 +52,7 @@ En sintesis, me parece que quedaria algo asi:
 suelte en el formato que sea, ponerla redonda (border-radius) y que se ponga justo detras del texto 
 
 
+IDEA LOCA, VER SI SE CUMPLE
+
+Que cada vez que toque el boton, se me pida escribir mediante prompt, que ese resultado se guarde, se almacene
+y luego se coloque en columnas 

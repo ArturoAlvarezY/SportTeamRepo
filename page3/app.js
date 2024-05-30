@@ -17,3 +17,17 @@ const team16=document.getElementById('team16');
 
 const addTeam=document.getElementById('addTeam');
 
+addTeam.addEventListener(click, ()={
+    for(let n=team1; n<=team16, n++){
+        const uTeamName= prompt('dime el nombre de tu equipo')
+    if(uTeamName===''){
+        return text1.InnerHTML= '<p>por favor, dale un nombre a tu equipo</p>'
+    }else{
+        return n.InnerHTML=`<p>${uTeamName}</p>`
+      
+    }
+    n++
+    }
+})
+    
+   
