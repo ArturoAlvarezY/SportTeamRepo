@@ -1,33 +1,53 @@
-const team1=document.getElementById('team1');
-const team2=document.getElementById('team2');
-const team3=document.getElementById('team3');
-const team4=document.getElementById('team4');
-const team5=document.getElementById('team5');
-const team6=document.getElementById('team6');
-const team7=document.getElementById('team7');
-const team8=document.getElementById('team8');
-const team9=document.getElementById('team9');
-const team10=document.getElementById('team10');
-const team11=document.getElementById('team11');
-const team12=document.getElementById('team12');
-const team13=document.getElementById('team13');
-const team14=document.getElementById('team14');
-const team15=document.getElementById('team15');
-const team16=document.getElementById('team16');
+const tableContainer= document.getElementById('teamsTable');
+const addTeam= document.getElementById('addTeam');
 
-const addTeam=document.getElementById('addTeam');
+//Dado a que quiero agregar unos elementos cada vez que le de click a un boton, 
+//he creado un contenedor para estos
 
-addTeam.addEventListener(click, ()={
-    for(let n=team1; n<=team16, n++){
-        const uTeamName= prompt('dime el nombre de tu equipo')
-    if(uTeamName===''){
-        return text1.InnerHTML= '<p>por favor, dale un nombre a tu equipo</p>'
+//Debo ser capaz 
+
+
+
+const addTeamElements=()=>{
+
+    //Primero, definimos los nombres y las etiquetas de los elementos que queremos introducir
+    const newTeam= document.createElement('p');
+    const editButton= document.createElement('button');
+    const deleteButton= document.createElement('button');
+
+    //Asignamos el elemento que tendra adentro nuestras etiquetas html
+    newTeam.textContent= prompt('Nombre de tu equipo:');
+    editButton.textContent= 'Edit';
+    deleteButton.textContent='Delete';
+
+    /*Debemos agregar un bucle, que cada vez que escribamos un ID, le aumente 1 unidad a ese ID*/
+    let teamId=1;
+    let newId= teamId++
+//Le damos un nombre de ID a cada elemento, con el +i para que cada uno de ellos aumente su indice en uno
+//Y por ende, tenga un ID unico.
+    newTeam.id= 'team' +newId;
+    editButton.id= 'edit' +newId;
+    deleteButton.id= 'delete' +newId;
+    //ahora las invocamos 
+    tableContainer.appendChild(newTeam)
+    tableContainer.appendChild(editButton)
+    tableContainer.appendChild(deleteButton)
+
+    if(newTeam===''){
+        return 'escribe el nombre de tu equipo por favor'
     }else{
-        return n.InnerHTML=`<p>${uTeamName}</p>`
-      
+        return `${newTeam}`
     }
-    n++
+}
+
+//Ahora debo invocar el boton para que cada vez que sea tocado, se invoque a la accion de agregar el equipo
+
+addTeam.addEventListener('click', ()=>{
+    addTeamElements()
+
+    if(addTeamElements>16){
+        return 'lo sentimos, ya no hay puesto para otro equipo';
     }
 })
+
     
-   
