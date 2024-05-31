@@ -5,7 +5,7 @@
 
 .login {
 	background-color: $primary-color;
-	color: $buttom-color;
+	color: $ligth-color;
 	padding: 2rem;
 	border-radius: 10px;
 	width: 45vb;
@@ -27,11 +27,3 @@
 	}
 }
 
-.btn {
-	width: 100px;
-	padding: 13px 10px 13px 10px;
-	border-radius: 10px;
-	text-decoration: none;
-	color: $ligth-color;
-	background-color: $black-color;
-}

@@ -1,3 +1,5 @@
+import { button_start } from "llenarTablaYRedirigir"; 
+
 //localStorage.setItem('name', nombre.value);
 //localStorage.getItem('name');
 //localStorage.setItem('testp', ["hola","pastel","Tururi",["hola dentro","hola dentro 2"]]);

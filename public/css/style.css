@@ -1,3 +1,4 @@
+@charset "UTF-8";
 nav {
   height: 50px;
   width: 100%;
@@ -82,7 +83,7 @@ nav .navbar-menu .active {
 
 .login {
   background-color: #124e8c;
-  color: #81ecdf;
+  color: #cfc2be;
   padding: 2rem;
   border-radius: 10px;
   width: 45vb;
@@ -102,45 +103,14 @@ nav .navbar-menu .active {
   border-radius: 10px;
 }
 
-.btn {
-  width: 100px;
-  padding: 13px 10px 13px 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #cfc2be;
-  background-color: #0a0310;
-}
-
 footer {
   display: flex;
   justify-content: space-between;
   background-color: #0a0310;
 }
-footer .container {
-  height: 20px;
-  margin-left: 50px;
-  padding-bottom: 15px;
-}
 footer > div {
   padding-left: 40px;
 }
-footer > a {
-  padding-right: 40px;
-}
-
-.btn-anadir {
-  font-size: 16px;
-  width: 100px;
-  height: 30px;
-  background-color: #124e8c;
-  color: #81ecdf;
-  border: none;
-  border-radius: 5px;
-  display: inline-block;
-  text-align: center;
-  line-height: 6px;
-}
-
 footer > a {
   padding-right: 40px;
 }
@@ -281,10 +251,39 @@ small {
   color: lightgray;
 }
 
-footer .copy {
-  margin-right: 100px;
-  display: flexbox;
-  justify-content: flex-end;
+.btn {
+  font-size: 16px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 6px;
+}
+
+.btn.comenzar {
+  width: 150px;
+  background-color: #124e8c;
+  color: none;
+  border: #124e8c;
+  border-radius: 10px;
+}
+
+.btn.añadir {
+  width: 80px;
+  background-color: #124e8c;
+  color: none;
+  border: #124e8c;
+  border-radius: 10px;
+}
+
+.btn.login {
+  width: 100px;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  line-height: normal;
+  background-color: #124e8c;
+  color: #cfc2be;
+  border: 1px solid #cfc2be;
+  border-radius: 10px;
 }
 
 body {
