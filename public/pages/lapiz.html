@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Sport Team | Team</title>
+</head>
+
+<body class="fondo">
+    <!-- Page Navbar -->
+    <nav>
+        <img src="../assets/img/logo.jpg" alt="logo baloncesto">
+        <h1 class="navbar-title">Sport Team</h1>
+        <div class="navbar-menu">
+            <a href="http://127.0.0.1:5500/index.html" class="active">Home</a>
+            <a href="http://127.0.0.1:5500/public/pages/login.html">Login</a>
+            <a href="http://127.0.0.1:5500/public/pages/team.html" hidden>Team</a>
+            <a href="http://127.0.0.1:5500/public/pages/ranking.html" hidden>Ranking</a>
+            <!-- <a href="#" hidden>KO phase</a>
+            <a href="#" hidden>Winner</a> -->
+        </div>
+    </nav>
+
+    <main>
+        <table id="tabla" cellspacing="0" cellpadding="0">
+            <tr class="destacado">
+                <td>Bandera</td>
+                <td>Nombre</td>
+                <td></td>
+            </tr>
+        </table>
+        <a class="btn" href="#open-modal">Añadir</a>
+        <button class="btn" onclick="llenarTabla();">Comenzar</button>
+
+        <div id="open-modal" class="modal-window">
+            <div>
+              <a href="#" title="Close" class="modal-close">Close</a>
+              <div>Ingrese los datos del equipo.</div>
+              <br>
+              <label for="nombre">Nombre</label>
+              <input id="nombre" type="text">
+              <br>
+              <label for="bandera">Bandera</label>
+               
+      <select id="dropdown">
+        <option value="">selecione bandera</option>
+        <option value="Brasil" style="background-image: url(../../public/assets/logos/flag/brasil.png);"></option>
+       <option value="Canada"><img src="../../public/assets/logos/flag/canada.png"></option>
+        <option value="dinamarca"><img src="../../public/assets/logos/flag/dinamarca.png"></option>
+        <option value="England"><img src="../../public/assets/logos/flag/england.png"></option>
+        <option value="Fance"><img src="../../public/assets/logos/flag/francia.png"></option>
+        <option value="Germany"><img src="../../public/assets/logos/flag/germany.png"></option>
+        <option value="Greece"><img src="../../public/assets/logos/flag/greecie.png"></option>
+        <option value="Italy"><img src="../../public/assets/logos/flag/italy.png"></option>
+        <option value="Japan"><img src="../../public/assets/logos/flag/japan.png"></option>
+        <option value="Mexico"><img src="../../public/assets/logos/flag/mexico.png"></option>
+        <option value="Spain"><img src="../../public/assets/logos/flag/spain.png"></option>
+        <option value="Swdeen"><img src="../../public/assets/logos/flag/suecia.png"></option>
+        
+      </select>
+              <br>
+              <button class="btn" onclick="anadir();">Añadir</button>
+            </div>
+          </div>
+          </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div>
+            <a href="https://www.facebook.com/?locale=es_ES"><img src="../assets/logos/icon-facebook.svg"
+                    alt="icono y link de faceboock" width="30px"></a>
+            <a href="https://www.instagram.com/accounts/login/"><img src="../assets/logos/icon-instagram.svg"
+                    alt="icono y link de instagram" width="30px"></a>
+            <a href="https://x.com/?lang=es"><img src="../assets/logos/icon-x.svg" alt="icono y link de x"
+                    width="30px"></a>
+            <a href="https://github.com/"><img src="../assets/logos/icon-github.svg" alt="icono y link de github"
+                    width="30px"></a>
+        </div>
+        <a href="../assets/logos/icon-copyright.svg" alt="icono de copyright"
+                width="30px">
+    </footer>
+<script src="../scripts/app.js"></script>
+<script src="../scripts/app.js"></script>
+</body>
