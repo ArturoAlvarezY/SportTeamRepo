@@ -1,23 +1,24 @@
-.flexH1 {
-    background: linear-gradient(rgb(92, 139, 172, 0.5), rgb(156, 221, 220, 0.5)), url(../../public/assets/img/baner.jpeg);
-    margin: 0;
-    padding: 0;
+.baner {
+    background: linear-gradient(rgb(92, 139, 172, 0.6), rgb(156, 221, 220, 0.5)), url(../../public/assets/img/baner.jpeg);
     background-size: cover;
-    height: 87.2vh;
+    height: 86.6vh;
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    > div{
+
+    >div {
         padding-bottom: 5%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        > h1 {
-            margin: 0;
+
+        >h1 {
             font-size: 3rem;
+            text-align: center;
         }
-        > p {
+
+        >p {
             font-size: 1.5rem;
         }
     }

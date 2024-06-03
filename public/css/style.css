@@ -1,40 +1,106 @@
-nav {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  background-color: #cfc2be;
+  font-family: "Roboto";
+}
+
+.nav {
   height: 50px;
   width: 100%;
   background-color: #0a0310;
-  color: #cfc2be;
   position: relative;
 }
-nav > img {
-  margin-left: 50px;
-  width: 45px;
-  border-radius: 50%;
+.nav > .nav-header {
+  display: inline;
+  color: #cfc2be;
+  font-size: 22px;
+  color: #cfc2be;
 }
-nav > .navbar-title {
-  display: inline-block;
+.nav > .nav-header > .nav-img {
+  padding-left: 10px;
 }
-nav .navbar-menu {
+.nav > .nav-header > .nav-img > img {
+  width: 40px;
+  border-radius: 50px;
+  margin-top: 5px;
+}
+.nav > .nav-btn {
+  display: none;
+}
+.nav > .nav-links {
   display: inline;
   float: right;
   font-size: 18px;
 }
-nav .navbar-menu > a {
+.nav > .nav-links > a {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #efefef;
+  color: #707397;
 }
-nav .navbar-menu > a:hover {
-  background-color: #cfc2be;
+.nav > .nav-links > a:hover {
+  background-color: #707397;
   color: #0a0310;
 }
-nav .navbar-menu .active {
-  background-color: #cfc2be;
-  color: #0a0310;
+.nav > #nav-check {
+  display: none;
 }
 
 @media (max-width: 600px) {
-  nav > .nav-menu {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover {
+    background-color: #707397;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: #707397;
+  }
+  .nav > .nav-links {
     position: absolute;
     display: block;
     width: 100%;
@@ -45,9 +111,17 @@ nav .navbar-menu .active {
     top: 50px;
     left: 0px;
   }
-  nav > .nav-menu > a {
+  .nav > .nav-links > a {
     display: block;
     width: 100%;
+    color: #0a0310;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
   }
 }
 .fondo {
@@ -58,28 +132,26 @@ nav .navbar-menu .active {
   background-repeat: no-repeat;
 }
 
-.flexH1 {
-  background: linear-gradient(rgba(92, 139, 172, 0.5), rgba(156, 221, 220, 0.5)), url(../../public/assets/img/baner.jpeg);
-  margin: 0;
-  padding: 0;
+.baner {
+  background: linear-gradient(rgba(92, 139, 172, 0.6), rgba(156, 221, 220, 0.5)), url(../../public/assets/img/baner.jpeg);
   background-size: cover;
-  height: 87.2vh;
+  height: 86.6vh;
   background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
-.flexH1 > div {
+.baner > div {
   padding-bottom: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.flexH1 > div > h1 {
-  margin: 0;
+.baner > div > h1 {
   font-size: 3rem;
+  text-align: center;
 }
-.flexH1 > div > p {
+.baner > div > p {
   font-size: 1.5rem;
 }
 
@@ -120,19 +192,25 @@ nav .navbar-menu .active {
 }
 
 footer {
+  background: #111;
+  height: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #fff;
   display: flex;
   justify-content: space-between;
-  background-color: #0a0310;
 }
 footer > div {
   padding-left: 40px;
+}
+footer > div > a {
+  padding-left: 10px;
 }
 footer > a {
   padding-right: 40px;
 }
 footer img {
   width: 30px;
-  padding: 5px;
 }
 
 .tabletext {
@@ -236,12 +314,6 @@ table tr:nth-child(even):hover {
 
 small {
   color: lightgray;
-}
-
-body {
-  margin: 0px;
-  background-color: #cfc2be;
-  font-family: "Poppins";
 }
 
 /*# sourceMappingURL=style.css.map */
