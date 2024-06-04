@@ -33,6 +33,15 @@ body {
   font-family: "Roboto";
 }
 
+.btn {
+  width: 100px;
+  padding: 13px 10px 13px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #cfc2be;
+  background-color: #0a0310;
+}
+
 .nav {
   height: 50px;
   width: 100%;
@@ -159,36 +168,26 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.login {
+.login-body .login {
   background-color: #124e8c;
   color: #81ecdf;
   padding: 2rem;
   border-radius: 10px;
-  width: 45vb;
   text-align: center;
 }
-.login .data {
+.login-body .login .data {
   text-align: start;
+  width: 100%;
   padding-block: 10px;
   padding-inline: 5px;
 }
-.login .data input {
+.login-body .login .data input {
   width: 100%;
   background-color: #cfc2be;
   color: #0a0310;
   padding: 12px 20px;
   box-sizing: border-box;
   border-radius: 10px;
-}
-
-.btn {
-  width: 100px;
-  padding: 13px 10px 13px 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #cfc2be;
-  background-color: #0a0310;
 }
 
 footer {

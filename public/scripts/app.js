@@ -1,3 +1,24 @@
+//login
+function check() {
+    if (localStorage.getItem('nick') == null) {
+        localStorage.setItem('nick', "admin");
+        localStorage.setItem('password', 'admin');
+    }
+}
+
+const nick = document.getElementById('nick')
+const password = document.getElementById('password')
+
+function logint() {
+    console.log(localStorage.getItem('nick') === nick.value && localStorage.getItem('password') === password.value)
+    if (localStorage.getItem('nick') == nick.value && localStorage.getItem('password') == password.value)
+        return window.location.href = "http://127.0.0.1:5500/public/pages/team.html"
+    else
+        alert("User or pasword incorect, tray again.")
+}
+//--
+
+//navBar and footer
 const nav = document.getElementById('nav')
 const footer = document.getElementById('footer')
 
@@ -16,11 +37,18 @@ if (localStorage.getItem('login') !== null) {
 if (localStorage.getItem('login') === 'false') {
     navLink = home + login
 }
-else
-{
+else {
     navLink = home + team
 }
 //condiciones para cuando empiece el partido
+
+//--
+let prefix = ''
+
+if (localStorage.getItem('home') === 'false')
+    prefix = '../'
+else
+    prefix = './public/'
 
 
 function navBar() {
@@ -28,7 +56,7 @@ function navBar() {
     <input type="checkbox" id="nav-check">
     <div class="nav-header">
         <span class="nav-img">
-            <img src="./public/assets/img/logo.jpg" alt="logo baloncesto">
+            <img src="${prefix}assets/img/logo.jpg" alt="logo baloncesto">
         </span>
             Sport Team
     </div>
@@ -45,17 +73,23 @@ function navBar() {
     `
     footer.innerHTML = `
     <div class=”footer-content”>
-        <a href="https://www.facebook.com/?locale=es_ES"><img src="./public/assets/logos/icon-facebook.svg"
+        <a href="https://www.facebook.com/?locale=es_ES"><img src="${prefix}assets/logos/icon-facebook.svg"
                 alt="icono y link de faceboock"></a>
-        <a href="https://www.instagram.com/accounts/login/"><img src="./public/assets/logos/icon-instagram.svg"
+        <a href="https://www.instagram.com/accounts/login/"><img src="${prefix}assets/logos/icon-instagram.svg"
                 alt="icono y link de instagram"></a>
-        <a href="https://x.com/?lang=es"><img src="./public/assets/logos/icon-x.svg" alt="icono y link de x"></a>
-        <a href="https://github.com/"><img src="./public/assets/logos/icon-github.svg"
+        <a href="https://x.com/?lang=es"><img src="${prefix}assets/logos/icon-x.svg" alt="icono y link de x"></a>
+        <a href="https://github.com/"><img src="${prefix}assets/logos/icon-github.svg"
                 alt="icono y link de github"></a>
     </div>
-    <a><img src="./public/assets/logos/icon-copyright.png" alt="icono de copyright"></a>
+    <a><img src="${prefix}assets/logos/icon-copyright.png" alt="icono de copyright"></a>
     `
 };
+//--
+
+
+
+
+
 
 //localStorage.setItem('name', nombre.value);
 //localStorage.getItem('name');
@@ -150,5 +184,6 @@ function anadir() {
 
 window.addEventListener('load', () => {
     //llenarTabla()
+    check()
     navBar()
 });
