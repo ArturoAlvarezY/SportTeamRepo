@@ -11,9 +11,10 @@ const password = document.getElementById('password')
 
 function logint() {
     console.log(localStorage.getItem('nick') === nick.value && localStorage.getItem('password') === password.value)
-    if (localStorage.getItem('nick') == nick.value && localStorage.getItem('password') == password.value)
+    if (localStorage.getItem('nick') == nick.value && localStorage.getItem('password') == password.value) {
+        localStorage.setItem('login', 'true')
         return window.location.href = "http://127.0.0.1:5500/public/pages/team.html"
-    else
+    } else
         alert("User or pasword incorect, tray again.")
 }
 //--
@@ -30,7 +31,7 @@ const koPase = '<a href="" hidden>Ranking</a>'
 const winner = '<a href="" hidden>Ranking</a>'
 let navLink = ''
 
-if (localStorage.getItem('login') !== null) {
+if (localStorage.getItem('login') == null) {
     localStorage.setItem('login', 'false');
 }
 
@@ -43,6 +44,9 @@ else {
 //condiciones para cuando empiece el partido
 
 //--
+
+// hacer un logout!!!!!!!!
+
 let prefix = ''
 
 if (localStorage.getItem('home') === 'false')
@@ -88,30 +92,7 @@ function navBar() {
 
 
 
-
-
-
-//localStorage.setItem('name', nombre.value);
-//localStorage.getItem('name');
-//localStorage.setItem('testp', ["hola","pastel","Tururi",["hola dentro","hola dentro 2"]]);
-// El arreglo:
-//var array = [
-//                ["icono Italia", "Italia"],
-//                ["icono Espana", "Espana"],
-//                ["icono Brazil", "Brazil"],
-//                ["icono Germany", "Germany"]
-//            ];
-////// Se guarda en localStorage despues de JSON stringificarlo 
-//localStorage.setItem('myArray', JSON.stringify(array));
-
-// Obtener el arreglo de localStorage
-
-//var array = localStorage.getItem('myArray');
-//// Se parsea para poder ser usado en js con JSON.parse :)
-//array = JSON.parse(array);
-
-
-
+// page team
 const tabla = document.getElementById('tabla');
 
 function llenarTabla() {
@@ -150,16 +131,6 @@ function llenarTabla() {
     }
 };
 
-//var array = [
-//                ["icono Italia", "Italia"],
-//                ["icono Espana", "Espana"],
-//                ["icono Brazil", "Brazil"],
-//                ["icono Germany", "Germany"]
-//            ];
-////// Se guarda en localStorage despues de JSON stringificarlo 
-//localStorage.setItem('myArray', JSON.stringify(array));
-
-//console.log(JSON.parse(localStorage.getItem('myArray')));
 function anadir() {
     if (localStorage.getItem('myArray') !== null) {
         let myArray = JSON.parse(localStorage.getItem('myArray'));
