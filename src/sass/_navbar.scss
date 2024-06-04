@@ -1,19 +1,32 @@
-nav {
+.nav {
 	height: 50px;
 	width: 100%;
 	background-color: $black-color;
-	color: $ligth-color;
 	position: relative;
-	>img {
-		margin-left: 50px;
-		width: 45px;
-		border-radius: 50%;
-	}
-	>.navbar-title {
-		display: inline-block;
+
+	>.nav-header {
+		display: inline;
+		color: $ligth-color;
+		font-size: 22px;
+		color: $ligth-color;
+
+		>.nav-img {
+			padding-left: 10px;
+
+			>img {
+				width: 40px;
+				border-radius: 50px;
+				margin-top: 5px;
+
+			}
+		}
 	}
 
-	.navbar-menu {
+	>.nav-btn {
+		display: none;
+	}
+
+	>.nav-links {
 		display: inline;
 		float: right;
 		font-size: 18px;
@@ -22,24 +35,56 @@ nav {
 			display: inline-block;
 			padding: 13px 10px 13px 10px;
 			text-decoration: none;
-			color: #efefef;
+			color: $secondary-color;
 
 			&:hover {
-				background-color: $ligth-color;
+				background-color: $secondary-color;
 				color: $black-color;
 			}
 		}
+	}
 
-		.active {
-			background-color: $ligth-color;
-			color: $black-color;
-		}
+	>#nav-check {
+		display: none;
 	}
 }
 
 @media (max-width:600px) {
-	nav {
-		>.nav-menu {
+	.nav {
+		>.nav-btn {
+			display: inline-block;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+
+			>label {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				padding: 13px;
+
+				&:hover {
+					background-color: $secondary-color;
+				}
+
+				>span {
+					display: block;
+					width: 25px;
+					height: 10px;
+					border-top: 2px solid #eee;
+				}
+			}
+		}
+
+		#nav-check {
+			&:checked~.nav-btn {
+				>label {
+					background-color: $secondary-color;
+				}
+			}
+		}
+
+		>.nav-links {
 			position: absolute;
 			display: block;
 			width: 100%;
@@ -53,6 +98,18 @@ nav {
 			>a {
 				display: block;
 				width: 100%;
+				color: $black-color;
+			}
+		}
+
+		>#nav-check {
+			&:not(:checked)~.nav-links {
+				height: 0px;
+			}
+
+			&:checked~.nav-links {
+				height: calc(100vh - 50px);
+				overflow-y: auto;
 			}
 		}
 	}

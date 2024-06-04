@@ -1,59 +1,98 @@
-//import { redirigirBarajear } from "./button_start.js";
-
-// Si los equipos estan entre 16 y 32 nos baraja los equipos y nos redirige hasta la pagina del ranking
-// Si no estan entre esas cantidades de equipos nos salta el mensaje 'El número de equipos debe ser entre 16 y 32.'
-function redirigirBarajear() {
-    let myArray = JSON.parse(localStorage.getItem('myArray'));
-    if (validarCantidadEquipos(myArray)) {
-        const bArray = barajarEquipos(myArray)
-        localStorage.setItem('barajadoArray', JSON.stringify(bArray));
-        window.location.href = "http://127.0.0.1:5500/public/pages/ranking.html"
-    } else {
-        alert('El número de equipos debe ser entre 16 y 32.');
+//login
+function check() {
+    if (localStorage.getItem('nick') == null) {
+        localStorage.setItem('nick', "admin");
+        localStorage.setItem('password', 'admin');
     }
 }
 
-// comprobar que esten los equipos entre 16 y 32
-function validarCantidadEquipos(myArray) {
-    let led = myArray.length
-    if (15 > led < 33)
-        return true
-    else return false
+const nick = document.getElementById('nick')
+const password = document.getElementById('password')
+
+function logint() {
+    console.log(localStorage.getItem('nick') === nick.value && localStorage.getItem('password') === password.value)
+    if (localStorage.getItem('nick') == nick.value && localStorage.getItem('password') == password.value) {
+        localStorage.setItem('login', 'true')
+        return window.location.href = "http://127.0.0.1:5500/public/pages/team.html"
+    } else
+        alert("User or pasword incorect, tray again.")
+}
+//--
+
+//navBar and footer
+const nav = document.getElementById('nav')
+const footer = document.getElementById('footer')
+
+const home = '<a href="http://127.0.0.1:5500/index.html" class="active">Home</a>'
+const login = '<a href="http://127.0.0.1:5500/public/pages/login.html">Login</a>'
+const team = '<a href="http://127.0.0.1:5500/public/pages/team.html" hidden>Team</a>'
+const ranking = '<a href="http://127.0.0.1:5500/public/pages/ranking.html" hidden>Ranking</a>'
+const koPase = '<a href="" hidden>Ranking</a>'
+const winner = '<a href="" hidden>Ranking</a>'
+let navLink = ''
+
+if (localStorage.getItem('login') == null) {
+    localStorage.setItem('login', 'false');
 }
 
-// para barajar los equipos con el algoritmo de Fisher-Yates
-function barajarEquipos(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
+if (localStorage.getItem('login') === 'false') {
+    navLink = home + login
 }
+else {
+    navLink = home + team
+}
+//condiciones para cuando empiece el partido
+
+//--
+
+// hacer un logout!!!!!!!!
+
+let prefix = ''
+
+if (localStorage.getItem('home') === 'false')
+    prefix = '../'
+else
+    prefix = './public/'
 
 
-//document.getElementById("comenzar").addEventListener("click", //redirigirBarajear());
+function navBar() {
+    nav.innerHTML = `
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <span class="nav-img">
+            <img src="${prefix}assets/img/logo.jpg" alt="logo baloncesto">
+        </span>
+            Sport Team
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+    <div class="nav-links">
+        ${navLink}
+    </div>
+    `
+    footer.innerHTML = `
+    <div class=”footer-content”>
+        <a href="https://www.facebook.com/?locale=es_ES"><img src="${prefix}assets/logos/icon-facebook.svg"
+                alt="icono y link de faceboock"></a>
+        <a href="https://www.instagram.com/accounts/login/"><img src="${prefix}assets/logos/icon-instagram.svg"
+                alt="icono y link de instagram"></a>
+        <a href="https://x.com/?lang=es"><img src="${prefix}assets/logos/icon-x.svg" alt="icono y link de x"></a>
+        <a href="https://github.com/"><img src="${prefix}assets/logos/icon-github.svg"
+                alt="icono y link de github"></a>
+    </div>
+    <a><img src="${prefix}assets/logos/icon-copyright.png" alt="icono de copyright"></a>
+    `
+};
+//--
 
-//localStorage.setItem('name', nombre.value);
-//localStorage.getItem('name');
-//localStorage.setItem('testp', ["hola","pastel","Tururi",["hola dentro","hola dentro 2"]]);
-// El arreglo:
-//var array = [
-//                ["icono Italia", "Italia"],
-//                ["icono Espana", "Espana"],
-//                ["icono Brazil", "Brazil"],
-//                ["icono Germany", "Germany"]
-//            ];
-////// Se guarda en localStorage despues de JSON stringificarlo 
-//localStorage.setItem('myArray', JSON.stringify(array));
-
-// Obtener el arreglo de localStorage
-
-//var array = localStorage.getItem('myArray');
-//// Se parsea para poder ser usado en js con JSON.parse :)
-//array = JSON.parse(array);
 
 
-
+// page team
 const tabla = document.getElementById('tabla');
 
 function llenarTabla() {
@@ -92,20 +131,6 @@ function llenarTabla() {
     }
 };
 
-window.addEventListener('load', () => {
-    llenarTabla();
-});
-
-//var array = [
-//                ["icono Italia", "Italia"],
-//                ["icono Espana", "Espana"],
-//                ["icono Brazil", "Brazil"],
-//                ["icono Germany", "Germany"]
-//            ];
-////// Se guarda en localStorage despues de JSON stringificarlo 
-//localStorage.setItem('myArray', JSON.stringify(array));
-
-//console.log(JSON.parse(localStorage.getItem('myArray')));
 function anadir() {
     if (localStorage.getItem('myArray') !== null) {
         let myArray = JSON.parse(localStorage.getItem('myArray'));
@@ -125,3 +150,11 @@ function anadir() {
     document.getElementById('nombre').value = '';
     document.getElementById('bandera').value = '';
 };
+
+
+
+window.addEventListener('load', () => {
+    //llenarTabla()
+    check()
+    navBar()
+});

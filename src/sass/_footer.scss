@@ -1,20 +1,26 @@
 footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: $black-color;
-   
-    >div {
-        padding-left: 40px;       
+  background: #111;
+  height: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+
+  >div {
+    padding-left: 40px;
+
+    >a {
+      padding-left: 10px;
     }
-   >a {
-      padding-right: 40px;
-    
-    }
-    img {
-        width: 30px;
-        padding: 5px;
-      }
+
+  }
+
+  >a {
+    padding-right: 40px;
+  }
+
+  img {
+    width: 30px;
+  }
 }
-
-
-

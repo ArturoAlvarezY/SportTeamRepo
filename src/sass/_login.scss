@@ -1,29 +1,28 @@
 .login-body {
 	justify-content: center;
 	align-items: center;
-}
 
-.login {
-	background-color: $primary-color;
-	color: $ligth-color;
-	padding: 2rem;
-	border-radius: 10px;
-	width: 45vb;
-	text-align: center;
+	.login {
+		background-color: $primary-color;
+		color: $buttom-color;
+		padding: 2rem;
+		border-radius: 10px;
+		text-align: center;
 
-	.data {
-		text-align: start;
-		padding-block: 10px;
-		padding-inline: 5px;
-
-		input {
+		.data {
+			text-align: start;
 			width: 100%;
-			background-color: $ligth-color;
-			color: $black-color;
-			padding: 12px 20px;
-			box-sizing: border-box;
-			border-radius: 10px;
+			padding-block: 10px;
+			padding-inline: 5px;
+
+			input {
+				width: 100%;
+				background-color: $ligth-color;
+				color: $black-color;
+				padding: 12px 20px;
+				box-sizing: border-box;
+				border-radius: 10px;
+			}
 		}
 	}
 }
-
