@@ -1,21 +1,26 @@
-let myArray = JSON.parse(localStorage.getItem('myArray'));
 
-function llenarTablaYRedirigir() {
-    window.location.href = "http://127.0.0.1:5500/public/pages/ranking.html"; 
+// function organizarGrupos() {
+//     if (localStorage.getItem('myArray') !== null) {
+//         let tab = JSON.parse(localStorage.getItem('myArray'));
+//         let temp = '';
+//     }
+// }
+// 
+// function barajarEquipos(myArray) {
+//     myArray.sort(function() { return Math.random() - 0.5 }); 
+//     localStorage.setItem()
+// }
+
+export function redirigirBarajear() {
+    console.log("conecte");
+    let myArray = JSON.parse(localStorage.getItem('myArray'));
+    if (validarCantidadEquipos(myArray)) {
+       let bArray = barajarEquipos(myArray)
+       // redirigir a pagina 4
+    } else {
+        alert('El número de equipos debe ser entre 16 y 32.');
+        console.log('El número de equipos debe ser entre 16 y 32.');
+    }
+
+   // return myArray.length >= 16 && myArray.length <= 32;
 }
-
-
-    var listaEquipos = document.getElementById('listaEquipos'); 
-    var equiposArray = Array.from(listaEquipos.paises);
-    equiposArray.sort(function(a, b) {
-        return a.innerText.localeCompare(b.innerText);
-    });
-
-//  while (listaEquipos.firstChild) {
-//      listaEquipos.removeChild(listaEquipos.firstChild);
-//  }
-//  
-//  equiposArray.forEach(function(equipo) {
-//      listaEquipos.appendChild(equipo);
-//  });
-

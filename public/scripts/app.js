@@ -1,4 +1,37 @@
-import { button_start } from "llenarTablaYRedirigir"; 
+//import { redirigirBarajear } from "./button_start.js";
+
+// Si los equipos estan entre 16 y 32 nos baraja los equipos y nos redirige hasta la pagina del ranking
+// Si no estan entre esas cantidades de equipos nos salta el mensaje 'El número de equipos debe ser entre 16 y 32.'
+function redirigirBarajear() {
+    let myArray = JSON.parse(localStorage.getItem('myArray'));
+    if (validarCantidadEquipos(myArray)) {
+        const bArray = barajarEquipos(myArray)
+        localStorage.setItem('barajadoArray', JSON.stringify(bArray));
+        window.location.href = "http://127.0.0.1:5500/public/pages/ranking.html"
+    } else {
+        alert('El número de equipos debe ser entre 16 y 32.');
+    }
+}
+
+// comprobar que esten los equipos entre 16 y 32
+function validarCantidadEquipos(myArray) {
+    let led = myArray.length
+    if (15 > led < 33)
+        return true
+    else return false
+}
+
+// para barajar los equipos con el algoritmo de Fisher-Yates
+function barajarEquipos(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+
+//document.getElementById("comenzar").addEventListener("click", //redirigirBarajear());
 
 //localStorage.setItem('name', nombre.value);
 //localStorage.getItem('name');
@@ -78,14 +111,14 @@ function anadir() {
         let myArray = JSON.parse(localStorage.getItem('myArray'));
         let nombre = document.getElementById('nombre').value;
         let bandera = document.getElementById('bandera').value;
-        myArray.push([bandera,nombre]);
+        myArray.push([bandera, nombre]);
         localStorage.setItem('myArray', JSON.stringify(myArray));
         llenarTabla();
     } else {
         let myArray = [];
         let nombre = document.getElementById('nombre').value;
         let bandera = document.getElementById('bandera').value;
-        myArray.push([bandera,nombre]);
+        myArray.push([bandera, nombre]);
         localStorage.setItem('myArray', JSON.stringify(myArray));
         llenarTabla();
     }
