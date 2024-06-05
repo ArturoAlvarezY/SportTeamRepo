@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
 .roboto-thin {
   font-family: "Roboto", sans-serif;
@@ -40,6 +41,22 @@ body {
   text-decoration: none;
   color: #cfc2be;
   background-color: #0a0310;
+}
+
+.comenzar {
+  width: 150px;
+  background-color: #124e8c;
+  color: none;
+  border: #124e8c;
+  border-radius: 10px;
+}
+
+.añadir {
+  width: 80px;
+  background-color: #124e8c;
+  color: none;
+  border: #124e8c;
+  border-radius: 10px;
 }
 
 .nav {
@@ -170,7 +187,7 @@ body {
 }
 .login-body .login {
   background-color: #124e8c;
-  color: #cfc2be;
+  color: #81ecdf;
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
@@ -313,12 +330,6 @@ table tr:nth-child(even):hover {
 
 small {
   color: lightgray;
-}
-
-body {
-  margin: 0px;
-  background-color: #cfc2be;
-  font-family: "Poppins";
 }
 
 /*# sourceMappingURL=style.css.map */
