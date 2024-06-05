@@ -85,7 +85,6 @@ body {
 .nav > .nav-links {
   display: inline;
   float: right;
-  font-size: 18px;
 }
 .nav > .nav-links > a {
   display: inline-block;
