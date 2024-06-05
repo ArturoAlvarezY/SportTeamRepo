@@ -162,12 +162,7 @@ window.addEventListener('load', () => {
 
 
 
-// Si los equipos estan entre 16 y 32 nos baraja los equipos y nos redirige hasta la pagina del ranking
-// Si no estan entre esas cantidades de equipos nos salta el mensaje 'El número de equipos debe ser entre 16 y 32.'
-// con ([...array]) asegura que no modifica el array original del localStorage
-// Llama a la función para dividir en grupos
-// Guarda los grupos en localStorage para usarlos en la otra página
-// Llama a la función para llenar la tabla con los equipos barajados
+
 function redirigirBarajear() {
     let myArray = JSON.parse(localStorage.getItem('myArray'));
     if (validarCantidadEquipos(myArray)) {
