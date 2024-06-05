@@ -45,3 +45,20 @@ borrarBtn.addEventListener("click", function() {
   });
 
   
+  function edit(index) { 
+    let tab = JSON.parse(localStorage.getItem('myArray'));
+     const nuevoNombre = prompt('Ingrese el nuevo nombre para el equipo:', tab[index][1]);
+     if (nuevoNombre) { 
+    tab[index][1] = nuevoNombre.trim(); 
+    localStorage.setItem('myArray', JSON.stringify(tab)); 
+    llenarTabla(); 
+    }
+     } 
+function deleteElement(index) { 
+    let tab = JSON.parse(localStorage.getItem('myArray'));
+     if (confirm('¿Estás seguro de que quieres eliminar este equipo?')) { 
+    tab.splice(index, 1); 
+    localStorage.setItem('myArray', JSON.stringify(tab)); llenarTabla();
+     } 
+    } 
+    window.onload = llenarTabla;
