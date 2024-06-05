@@ -29,15 +29,38 @@ function llenarTabla() {
             temp = temp + `<tr>
                                 <td>${element[0]}</td>
                                 <td>${element[1]}</td>
-                                <td></td>
-                            </tr>
-                        `;
+                                <td>
+                                <button onclick="edit(indice)">Editar</button>
+                                <button onclick="delete(indice)">Borrar</button>
+                                </td>                              
+                            </tr>`;
+
+                            function edit(index) { 
+                                let tab = JSON.parse(localStorage.getItem('myArray'));
+                                 const nuevoNombre = prompt('Ingrese el nuevo nombre para el equipo:', tab[index][1]);
+                                 if (nuevoNombre) { 
+                                tab[index][1] = nuevoNombre.trim(); 
+                                localStorage.setItem('myArray', JSON.stringify(tab)); 
+                                llenarTabla(); 
+                                }
+                                 } 
+                            function deleteElement(index) { 
+                                let tab = JSON.parse(localStorage.getItem('myArray'));
+                                 if (confirm('¿Estás seguro de que quieres eliminar este equipo?')) { 
+                                tab.splice(index, 1); 
+                                localStorage.setItem('myArray', JSON.stringify(tab)); llenarTabla();
+                                 } 
+                                } 
+                                window.onload = llenarTabla;
+
+
         });
         tabla.innerHTML = `
             <tr class="destacado">
                 <td>Bandera</td>
                 <td>Nombre</td>
                 <td></td>
+               
             </tr>
             ${temp}
         `;
@@ -76,17 +99,25 @@ function anadir() {
         let myArray = JSON.parse(localStorage.getItem('myArray'));
         let nombre = document.getElementById('nombre').value;
         let bandera = document.getElementById('bandera').value;
-        myArray.push([bandera,nombre]);
+        let editar = document.getElementById('editarBtn').value;
+        let borrar = document.getElementById('borrarBtn').value;
+       
+
+        myArray.push([bandera,nombre, editar, borrar]);
         localStorage.setItem('myArray', JSON.stringify(myArray));
         llenarTabla();
     } else {
         let myArray = [];
         let nombre = document.getElementById('nombre').value;
         let bandera = document.getElementById('bandera').value;
-        myArray.push([bandera,nombre]);
+        let editar = document.getElementById('editarBtn').value;
+        let borrar = document.getElementById('borrarBtn').value;
+        myArray.push([bandera,nombre, editar, borrar]);
         localStorage.setItem('myArray', JSON.stringify(myArray));
         llenarTabla();
     }
     document.getElementById('nombre').value = '';
-    document.getElementById('bandera').value = '';
+    document.getElementById('bandera').value = ''; 
+    let editar = document.getElementById('editarBtn').value = 'editar'
+    let borrar = document.getElementById('borrarBtn').value = 'borrar'
 };

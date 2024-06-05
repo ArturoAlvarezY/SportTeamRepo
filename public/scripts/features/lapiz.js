@@ -25,3 +25,23 @@ addTeamFlag.addEventListener('click', ()=>{
 
    
 })
+
+// Obtén los botones por su ID
+
+const editarBtn = document.getElementById("editarBtn");
+const borrarBtn = document.getElementById("borrarBtn");
+
+// Añade un evento de click al botón de editar
+
+editarBtn.addEventListener("click", function() {
+    alert("Has hecho clic en el botón de editar!");
+  });
+
+
+// Añade un evento de click al botón de borrar
+
+borrarBtn.addEventListener("click", function() {
+    alert("Has hecho clic en el botón de borrar!");
+  });
+
+  
