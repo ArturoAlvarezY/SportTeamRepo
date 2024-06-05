@@ -6,3 +6,19 @@
 	color: $ligth-color;
 	background-color: $black-color;
 }
+
+.comenzar {
+	width: 150px;
+	background-color: $primary-color; 
+	color: none;  
+	border: $primary-color;
+    border-radius: 10px;
+  }
+
+.añadir {
+	width: 80px;
+	background-color: $primary-color; 
+	color: none; 
+	border: $primary-color;
+    border-radius: 10px;
+  }
