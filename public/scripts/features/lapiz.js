@@ -25,3 +25,40 @@ addTeamFlag.addEventListener('click', ()=>{
 
    
 })
+
+// Obtén los botones por su ID
+
+const editarBtn = document.getElementById("editarBtn");
+const borrarBtn = document.getElementById("borrarBtn");
+
+// Añade un evento de click al botón de editar
+
+editarBtn.addEventListener("click", function() {
+    alert("Has hecho clic en el botón de editar!");
+  });
+
+
+// Añade un evento de click al botón de borrar
+
+borrarBtn.addEventListener("click", function() {
+    alert("Has hecho clic en el botón de borrar!");
+  });
+
+  
+  function edit(index) { 
+    let tab = JSON.parse(localStorage.getItem('myArray'));
+     const nuevoNombre = prompt('Ingrese el nuevo nombre para el equipo:', tab[index][1]);
+     if (nuevoNombre) { 
+    tab[index][1] = nuevoNombre.trim(); 
+    localStorage.setItem('myArray', JSON.stringify(tab)); 
+    llenarTabla(); 
+    }
+     } 
+function deleteElement(index) { 
+    let tab = JSON.parse(localStorage.getItem('myArray'));
+     if (confirm('¿Estás seguro de que quieres eliminar este equipo?')) { 
+    tab.splice(index, 1); 
+    localStorage.setItem('myArray', JSON.stringify(tab)); llenarTabla();
+     } 
+    } 
+    window.onload = llenarTabla;
