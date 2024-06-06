@@ -54,5 +54,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function bigin() {
     //busca los equipos por tabla y ve de cada tabla quien es el que
-    
+    const barajadoArray = JSON.parse(localStorage.getItem('barajadoArray'))
+    const max = Math.ceil(barajadoArray.length / 4)
+
+    for (let i = 0; i < max; i++) {
+        let temp = [];
+        for (let j = 0; j < 4; j++) {
+            const puntos = document.getElementById(i + "puntos" + j)
+            if (temp.length == 0)
+                temp.push(puntos)
+        }
+    }
 }
