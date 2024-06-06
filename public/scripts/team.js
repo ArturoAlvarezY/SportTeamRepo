@@ -50,7 +50,7 @@ function anadir() {
     } else {
         let myArray = [];
         let nombre = document.getElementById('nombre').value
-        let bandera = document.getElementById('seleccion').value
+        let bandera = document.getElementById('bandera').value
         myArray.push([bandera, nombre])
         localStorage.setItem('myArray', JSON.stringify(myArray))
         llenarTablaInicial();
@@ -81,7 +81,6 @@ function deleteElement(index) {
 
 //baraja los equipos
 function validarCantidadEquipos(myArray) {
-    let led = myArray.length
     if (myArray.length >= 16 && myArray.length <= 32)
         return true
     else
@@ -111,7 +110,7 @@ function dividirEquiposEnGrupos(array) {
 
 function redirigirBarajear() {
     let myArray = JSON.parse(localStorage.getItem('myArray'));
-    if (validarCantidadEquipos(myArray)) {
+    if (localStorage.getItem('myArray') !== null && validarCantidadEquipos(myArray)) {
         const bArray = barajarEquipos([...myArray]);
         localStorage.setItem('barajadoArray', JSON.stringify(bArray));
         const grupos = dividirEquiposEnGrupos(bArray);
