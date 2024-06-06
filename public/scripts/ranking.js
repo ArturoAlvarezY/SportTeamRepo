@@ -1,21 +1,45 @@
-
 function llenarTabla(equipos) {
-    const tableBody = document.querySelector('#rankingTable')
 
-    equipos.forEach((equipo, index) => {
-        const row = document.createElement('tr');
+    const main = document.querySelector('#main')
+    const max = Math.ceil(equipos.length / 4)
+    const table = document.createElement('table')
 
-        const cellPosicion = document.createElement('td')
-        cellPosicion.textContent = equipo[0]
-        row.appendChild(cellPosicion);
+    for (let i = 0; i < max; i++) {
 
-        const cellEquipo = document.createElement('td')
-        cellEquipo.textContent = equipo[1];
-        row.appendChild(cellEquipo);
+        const tableBody = document.createElement('rankingTable' + i);
+        tableBody.setAttribute("id", "rankingTable" + i)
+        tableBody.setAttribute("cellspacing", "0")
+        tableBody.setAttribute("cellpadding", "0")
 
-        tableBody.appendChild(row);
+        //equipos.forEach((equipo, index) => {
+        //array a entrar en la tabla
+        const equipo = equipos
 
-    })
+        for (let j = 0; j < 4; j++) {
+
+            if (equipo[0]) {
+                const row = document.createElement('tr')
+
+                const cellBandera = document.createElement('td')
+                cellBandera.textContent = equipo[0][0]
+                row.appendChild(cellBandera)
+
+                const cellEquipo = document.createElement('td')
+                cellEquipo.textContent = equipo[0][1]
+                row.appendChild(cellEquipo)
+
+                const inputt = document.createElement("INPUT")
+                inputt.setAttribute("type", "text")
+                inputt.setAttribute("id", i + "puntos" + j)
+                row.appendChild(inputt)
+
+                tableBody.appendChild(row)
+                equipo.shift()
+            }
+        }
+        table.appendChild(tableBody);
+    }
+    main.appendChild(table);
 }
 
 //load
@@ -24,6 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (barajadoArray && Array.isArray(barajadoArray)) {
         llenarTabla(barajadoArray);
     } else {
-        //alert('No se encontraron equipos barajados en localStorage.');
+        alert('No se encontraron equipos barajados en localStorage.');
     }
 })
+
+function bigin() {
+    //busca los equipos por tabla y ve de cada tabla quien es el que
+    
+}
