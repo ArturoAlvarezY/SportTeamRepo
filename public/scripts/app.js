@@ -13,7 +13,7 @@ function logint() {
     console.log(localStorage.getItem('nick') === nick.value && localStorage.getItem('password') === password.value)
     if (localStorage.getItem('nick') == nick.value && localStorage.getItem('password') == password.value) {
         localStorage.setItem('login', 'true')
-        return window.location.href = "http://127.0.0.1:5500/public/pages/team.html"
+        return window.location.href = "https://arturoalvarezy.github.io/SportTeamRepo/public/pages/team.html"
     } else
         alert("User or pasword incorect, tray again.")
 }
@@ -23,10 +23,10 @@ function logint() {
 function initNavbarFooter() {
     const nav = document.getElementById('nav')
     const footer = document.getElementById('footer')
-    const home = '<a href="http://127.0.0.1:5500/index.html" class="active">Home</a>'
-    const login = '<a href="http://127.0.0.1:5500/public/pages/login.html">Login</a>'
-    const team = '<a href="http://127.0.0.1:5500/public/pages/team.html" hidden>Team</a>'
-    const ranking = '<a href="http://127.0.0.1:5500/public/pages/ranking.html" hidden>Ranking</a>'
+    const home = '<a href="https://arturoalvarezy.github.io/SportTeamRepo/" class="active">Home</a>'
+    const login = '<a href="https://arturoalvarezy.github.io/SportTeamRepo/public/pages/login.html">Login</a>'
+    const team = '<a href="https://arturoalvarezy.github.io/SportTeamRepo/public/pages/team.html" hidden>Team</a>'
+    const ranking = '<a href="https://arturoalvarezy.github.io/SportTeamRepo/public/pages/ranking.html" hidden>Ranking</a>'
     const koPase = '<a href="" hidden>Ranking</a>'
     const winner = '<a href="" hidden>Ranking</a>'
     let navLink = ''
