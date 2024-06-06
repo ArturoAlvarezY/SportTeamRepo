@@ -20,23 +20,40 @@
                 <td>Bandera</td>
                 <td>Nombre</td>
                 <td></td>
+
             </tr>
         </table>
-        <a class="comenzar" href="#open-modal">Añadir</a>
-        <button class="comenzar" onclick="redirigirBarajear();" id="comenzar">Comenzar</button>
+        <a class="anadir" href="#open-modal">Añadir</a>
+        <button class="comenzar" onclick="redirigirBarajear();">Comenzar</button>
 
         <div id="open-modal" class="modal-window">
             <div>
               <a href="#" title="Close" class="modal-close">Close</a>
-              <div>Ingrese los datos del equipo.</div>
+              <div>enter equipment data.</div>
               <br>
-              <label for="nombre">Nombre</label>
+              <label for="nombre">name</label>
               <input id="nombre" type="text">
               <br>
-              <label for="bandera">Bandera</label>
-              <input id="bandera" type="text">
+              <label for="bandera">Flag</label>
+               
+              <select id="bandera">
+                <option value="">Choose your flag</option>
+                <option value="🇧🇷"><span class="tall">🇧🇷</span>Brasil</option>
+                <option value="🇨🇦"><span class="tall">🇨🇦</span>Canada</option>
+                <option value="🇩🇰"><span class="tall">🇩🇰</span>Denmark</option>
+                <option value="🇬🇧"><span class="tall">🇬🇧</span>England</option>
+                <option value="🇫🇷"><span class="tall">🇫🇷</span>France</option>
+                <option value="🇩🇪"><span class="tall">🇩🇪</span>Germany</option>
+                <option value="🇬🇷"><span class="tall">🇬🇷</span>Greecie</option>
+                <option value="🇮🇹"><span class="tall">🇮🇹</span>Italy</option>
+                <option value="🇯🇵"><span class="tall">🇯🇵</span>Japan</option>
+                <option value="🇨🇮"><span class="tall">🇨🇮</span>México</option>
+                <option value="🇪🇸"><span class="tall">🇪🇸</span>Spain</option>
+                <option value="🇸🇪"><span class="tall">🇸🇪</span>Sweden</option>
+            </select>          
+            
               <br>
-              <button class="añadir" onclick="anadir();">Añadir</button>
+              <button class="bt" onclick="anadir();">Añadir</button>
             </div>
           </div>
           </div>
