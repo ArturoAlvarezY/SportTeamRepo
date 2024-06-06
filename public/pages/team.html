@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Sport Team | Team</title>
+    <script src="https://kit.fontawesome.com/b69d31026d.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="fondo">
@@ -22,24 +23,61 @@
                 <td></td>
             </tr>
         </table>
-        <a class="comenzar" href="#open-modal">Añadir</a>
-        <button class="comenzar" onclick="redirigirBarajear();" id="comenzar">Comenzar</button>
+        <a class="btn" href="#open-modal">Añadir</a>
+        <button class="btn" onclick="redirigirBarajear();" id="comenzar">Comenzar</button>
 
         <div id="open-modal" class="modal-window">
             <div>
-              <a href="#" title="Close" class="modal-close">Close</a>
-              <div>Ingrese los datos del equipo.</div>
-              <br>
-              <label for="nombre">Nombre</label>
-              <input id="nombre" type="text">
-              <br>
-              <label for="bandera">Bandera</label>
-              <input id="bandera" type="text">
-              <br>
-              <button class="añadir" onclick="anadir();">Añadir</button>
+                <a href="#" title="Close" class="modal-close">Close</a>
+                <div>Enter equipment data</div>
+                <br>
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text">
+                <br>
+                <select id="bandera" name="country">
+                    <option value="ar" class="flag-option"></i>Argentina</option>
+                    <option value="au" class="flag-option"></i>Australia</option>
+                    <option value="br" class="flag-option"></i>Brasil</option>
+                    <option value="ca" class="flag-option"></i>Canadá</option>
+                    <option value="cl" class="flag-option"></i>Chile</option>
+                    <option value="cn" class="flag-option"></i>China</option>
+                    <option value="co" class="flag-option"></i>Colombia</option>
+                    <option value="cu" class="flag-option"></i>Cuba</option>
+                    <option value="eg" class="flag-option"></i>Egipto</option>
+                    <option value="fr" class="flag-option"></i>Francia</option>
+                    <option value="de" class="flag-option"></i>Alemania</option>
+                    <option value="in" class="flag-option"></i>India</option>
+                    <option value="id" class="flag-option"></i>Indonesia</option>
+                    <option value="it" class="flag-option"></i>Italia</option>
+                    <option value="jp" class="flag-option"></i>Japón</option>
+                    <option value="mx" class="flag-option"></i>México</option>
+                    <option value="ma" class="flag-option"></i>Marruecos</option>
+                    <option value="nl" class="flag-option"></i>Países Bajos</option>
+                    <option value="nz" class="flag-option"></i>Nueva Zelanda</option>
+                    <option value="ng" class="flag-option"></i>Nigeria</option>
+                    <option value="pk" class="flag-option"></i>Pakistán</option>
+                    <option value="pe" class="flag-option"></i>Perú</option>
+                    <option value="ph" class="flag-option"></i>Filipinas</option>
+                    <option value="pl" class="flag-option"></i>Polonia</option>
+                    <option value="pt" class="flag-option"></i>Portugal</option>
+                    <option value="ru" class="flag-option"></i>Rusia</option>
+                    <option value="sa" class="flag-option"></i>Arabia Saudita</option>
+                    <option value="za" class="flag-option"></i>Sudáfrica</option>
+                    <option value="kr" class="flag-option"></i>Corea del Sur</option>
+                    <option value="es" class="flag-option"></i>España</option>
+                    <option value="se" class="flag-option"></i>Suecia</option>
+                    <option value="ch" class="flag-option"></i>Suiza</option>
+                    <option value="tr" class="flag-option"></i>Turquía</option>
+                    <option value="gb" class="flag-option"></i>Reino Unido</option>
+                    <option value="us" class="flag-option"></i>Estados Unidos</option>
+                </select>
+                <!--<label for="bandera">Bandera</label>
+                <input id="bandera" type="text">-->
+                <br>
+                <button class="btn" onclick="anadir();">Añadir</button>
             </div>
-          </div>
-          </div>
+        </div>
+        </div>
     </main>
 
     <!--Footer-->

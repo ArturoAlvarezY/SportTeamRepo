@@ -9,8 +9,8 @@ function llenarTablaInicial() {
                                 <td>${element[0]}</td>
                                 <td>${element[1]}</td>
                                 <td>
-                                <button onclick="edit(${index})">Editar</button>
-                                <button onclick="deleteElement(${index})">Borrar</button>
+                                <button onclick="edit(${index})"><i class="fa-solid fa-pen"></i></button>
+                                <button onclick="deleteElement(${index})"><i class="fa-solid fa-trash"></i></button>
                                 </td>                              
                             </tr>`
         })
@@ -50,7 +50,7 @@ function anadir() {
     } else {
         let myArray = [];
         let nombre = document.getElementById('nombre').value
-        let bandera = document.getElementById('bandera').value
+        let bandera = document.getElementById('seleccion').value
         myArray.push([bandera, nombre])
         localStorage.setItem('myArray', JSON.stringify(myArray))
         llenarTablaInicial();
